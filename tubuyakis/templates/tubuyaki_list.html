@@ -1,0 +1,20 @@
+<h1>↓投稿は下から↓</h1>
+
+<div>
+  <h2>投稿</h2>
+  <form action="post" method="POST">
+    {% csrf_token %}
+    <!-- ↓ これを追加 -->
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" name="name" />
+    </div>
+    <div>
+      <label for="message">Message:</label>
+      <input type="text" name="message" />
+    </div>
+    <input type="submit" value="決定" />
+  </form>
+</div>
+<h5><a href="{% url 'tubuyakis:view' %}">閲覧ページへ</a></h5>
+<h5><a href="{% url 'tubuyakis:index' %}">topページへ</a></h5>

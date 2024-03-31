@@ -1,0 +1,14 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="auto">
+  <body>
+    <a href="{% url 'tubuyakis:index' %}">
+      <img src='media/pages/home.png' alt="Image Description">
+  </a>
+   
+    <main>{% block contents %}{% endblock %}</main>
+
+    </body>
+</html>
+

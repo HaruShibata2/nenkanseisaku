@@ -1,0 +1,14 @@
+{% block contents %}
+{% for tw in tweet_list %}
+<div>
+  <h1>閲覧ページ</h1>
+<h5><a href="{% url 'tubuyakis:index' %}">topに戻る</a></h5>
+<h5><a href="{% url 'tubuyakis:view2' %}">投稿ページに戻る</a></h5>
+  
+<li>    
+  {{tw.name}}:
+  {{tw.message}}
+</li>
+</div>
+{% endfor %}
+{% endblock %}
